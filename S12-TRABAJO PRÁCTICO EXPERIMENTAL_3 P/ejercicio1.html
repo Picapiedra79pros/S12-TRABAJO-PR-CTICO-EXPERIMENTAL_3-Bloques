@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Calificaciones</title>
+</head>
+<body>
+
+<h2>Sistema de Búsqueda y Análisis de Calificaciones</h2>
+
+<form id="formulario" onsubmit="return false;">
+
+<table border="1" cellpadding="8">
+
+    <tr>
+        <th colspan="3">Registro de Calificaciones</th>
+    </tr>
+
+    <tr>
+        <td>Cantidad de estudiantes</td>
+        <td>
+            <input type="text" value="15" readonly>
+        </td>
+        <td>
+            <!-- Permite iniciar un nuevo registro -->
+            <button type="button" id="btnIniciar">
+                Iniciar
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ingrese la calificación (0 a 10)</td>
+        <td>
+            <input type="number" id="nota"
+                   min="0" max="10" step="any">
+        </td>
+        <td>
+            <!-- Registra una nota en el vector -->
+            <button type="button" id="btnAgregar" disabled>
+                Agregar Calificación
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Calificaciones registradas</td>
+        <td>
+            <textarea id="listaNotas"
+                      rows="8" cols="35"
+                      readonly></textarea>
+        </td>
+        <td>
+            <!-- Muestra las notas ingresadas -->
+            <button type="button" id="btnPresentar">
+                Presentar
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Calificaciones ingresadas</td>
+        <td>
+            <input type="text" id="cantidad" readonly>
+        </td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th colspan="3">Búsqueda y Análisis</th>
+    </tr>
+
+    <tr>
+        <td>Calificación de referencia</td>
+        <td>
+            <input type="number" id="buscar"
+                   min="0" max="10" step="any">
+        </td>
+        <td>
+            <!-- Busca la nota y calcula los resultados -->
+            <button type="button" id="btnBuscar" disabled>
+                Buscar y Analizar
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Resultado de la búsqueda</td>
+        <td colspan="2">
+            <input type="text" id="resultado"
+                   size="45" readonly>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Posiciones encontradas</td>
+        <td colspan="2">
+            <textarea id="posiciones"
+                      rows="3" cols="45"
+                      readonly></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Calificaciones superiores</td>
+        <td colspan="2">
+            <input type="text" id="superiores" readonly>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Calificaciones inferiores</td>
+        <td colspan="2">
+            <input type="text" id="inferiores" readonly>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Calificaciones iguales</td>
+        <td colspan="2">
+            <input type="text" id="iguales" readonly>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Calificación más alta</td>
+        <td colspan="2">
+            <input type="text" id="mayor" readonly>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Primera posición de la nota más alta</td>
+        <td colspan="2">
+            <input type="text" id="posicionMayor" readonly>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3" align="center">
+            <!-- Elimina todos los datos registrados -->
+            <button type="button" id="btnReiniciar">
+                Reiniciar
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3">
+            <p id="mensaje"></p>
+        </td>
+    </tr>
+
+</table>
+
+</form>
+
+<!-- Archivo JavaScript -->
+<script src="ejercicio1.js"></script>
+
+</body>
+</html>
